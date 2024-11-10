@@ -31,7 +31,7 @@ func getEnvOrDefault(envKey, defaultValue string) string {
 
 func LoadConfig() (*Config, error) {
 	return &Config{
-		DBHost:     getEnvOrDefault("DB_HOST", "localhost"),
+		DBHost:     getEnvOrDefault("DB_HOST", "db"),
 		DBPort:     getEnvOrDefault("DB_PORT", "5432"),
 		DBUser:     getEnvOrDefault("DB_USER", "postgres"),
 		DBPassword: getEnvOrDefault("DB_PASSWORD", "admin1234"),

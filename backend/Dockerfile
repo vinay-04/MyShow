@@ -1,4 +1,4 @@
-FROM golang:1.21-alpine
+FROM golang:1.23.1-alpine
 
 WORKDIR /app
 
@@ -9,13 +9,6 @@ COPY . .
 
 RUN go build -o main .
 
-ENV PORT=8080 \
-    DB_HOST=postgres \
-    DB_PORT=5432 \
-    DB_USER=postgres \
-    DB_PASSWORD=admin1234 \
-    DB_NAME=myshow \
-    JWT_SECRET=your-secret-key
 
 EXPOSE 8080
 

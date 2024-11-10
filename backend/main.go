@@ -39,7 +39,8 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	e.Use(middleware.Validate)
+
+	// e.Use(middleware.Validate)
 
 	e.Use(echo.WrapMiddleware(middleware.LoggingMiddleware))
 

@@ -10,6 +10,14 @@ services:
       - 5432:5432
     volumes:
       - myshow_db_data:/var/lib/postgresql/data
+  
+  backend:
+    image: myshow-backend
+    restart: always
+    container_name: myshow-backend
+    ports:
+      - 8080:8080
+    
 
 volumes:
   myshow_db_data:
