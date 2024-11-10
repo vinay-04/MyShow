@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:myshow/components/eventCard.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -97,9 +98,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               );
                             },
                           );
-                          if (pickedDate != null) {
-                            // Handle the picked date
-                          }
+                          if (pickedDate != null) {}
                         },
                       ),
                       const SizedBox(height: 16),
@@ -133,9 +132,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               );
                             },
                           );
-                          if (pickedTime != null) {
-                            // Handle the picked time
-                          }
+                          if (pickedTime != null) {}
                         },
                       ),
                       const SizedBox(height: 16),
@@ -163,9 +160,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             borderRadius: BorderRadius.circular(8),
                           ),
                         ),
-                        onPressed: () {
-                          // Handle the save event action
-                        },
+                        onPressed: () {},
                         child: const Text(
                           'Save Event',
                           style: TextStyle(
@@ -206,7 +201,7 @@ class _HomeScreenState extends State<HomeScreen> {
               size: 28,
             ),
             onPressed: () {
-              Navigator.pushNamed(context, '/profile');
+              context.push('/profile');
             },
           ),
         ],
